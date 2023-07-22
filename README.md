@@ -8,39 +8,51 @@ we have taken ->Token Name: Degen Token
 -> Token Symbol: DEGEN for deployment of the dependencies of the project 
 
 
-## Functionality:
+### ERC-20 Compliance
 
-Your task is to create a ERC20 token and deploy it on the Avalanche network for Degen Gaming. The smart contract should have the following functionality:
+The Degen Token contract strictly follows the ERC-20 standard, which ensures compatibility with various decentralized applications, exchanges, and wallets that support ERC-20 tokens. This compliance guarantees that the token can be seamlessly traded, exchanged, and interacted with other ERC-20 compatible contracts and platforms.
 
-1. Minting new tokens: The platform should be able to create new tokens and distribute them to players as rewards. Only the owner can mint tokens.
-2. Transferring tokens: Players should be able to transfer their tokens to others.
-3. Redeeming tokens: Players should be able to redeem their tokens for items in the in-game store.
-4. Checking token balance: Players should be able to check their token balance at any time.
-5. Burning tokens: Anyone should be able to burn tokens, that they own, that are no longer needed.
+# Contract Features
 
 
+### Token Mint: 
+we mint the token to add the value. The total supply of tokens is defined during contract creation
 
-### Network Setup
+### Token Balance:
+The contract provides a balanceOf function to inquire about the balance of Degen Tokens for a given Ethereum address.
+
+### Token transfer:
+Users can transfer Degen Tokens between addresses using the transfer function. Standard ERC-20 rules apply to transfers, including preventing transfers to the contract itself and handling of insufficient token balances.
+
+### Token Reedem:
+user can reedem their token and take their reward and futher they can burn the token too from the totalsupply of the token.
+
+### Token Burn:
+we Burn the token to deduct the value of total from the totalsupply
+
+
+### procedure
 
 Fuji Testnet Settings:
 
-  Network Name: ```Avalanche Fuji C-Chain```
+  Network Name: Avalanche Fuji C-Chain
 
-  New RPC URL: ```https://api.avax-test.network/ext/bc/C/rpc```
+  New RPC URL: https://api.avax-test.network/ext/bc/C/rpc
 
-  ChainID: ```43113```
+  ChainID: 43113
 
-  Symbol: ```AVAX```
+  Symbol: AVAX
 
-  Explorer: ```https://testnet.snowtrace.io/```
+  Explorer: https://testnet.snowtrace.io/
 
 
-### Executing program and Deployment
+### Step to follow
+
 1. Connect Remix IDE with MetaMask Wallet by changing environment to Inject provider.
 2. Deploy the contract in the Avalanche network
 3. Get the API key from ```snowtracer.io```
 4. Get the contract verified. You'd need Contract address, compiler versoin, API key and contract name.
-5. 5.Players can then start interacting with the contract using the functions provided - transfer, redeem, and checkBalance - to participate in Degen Gaming and earn rewards.
+5. Players can then start interacting with the contract using the functions provided - transfer, redeem, and checkBalance - to participate in Degen Gaming and earn rewards.
 
 ## Author
 Sidharth Samantaray
